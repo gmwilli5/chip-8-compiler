@@ -9,8 +9,13 @@ class compiler{
         File output_file;
         std::vector<unsigned short> opcodes;
         std::string line;
+        std::string instruction;
     public:
         void run();
         void inteperate_line();
+        void get_next_line();
+        void strip_instruction();
+        void string_too_opcode(std::string opcode);
+        void sys();
 };
 #endif // COMPILER_H_INCLUDED
