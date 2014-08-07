@@ -55,6 +55,8 @@ void compiler::inteperate_line()
         skp();
     }else if(instruction=="sknp"){
         sknp();
+    }else if(instruction=="addi"){
+        addi();
     }
 }
 void compiler::get_next_line()

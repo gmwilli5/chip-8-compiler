@@ -40,6 +40,7 @@ class compiler{
         void drw();
         void skp();
         void sknp();
+        void addi();
         ///ld instructions and tools
         void ld();
         void strip_first_ld_arg();

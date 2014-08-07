@@ -23,8 +23,22 @@ void compiler::ld()
             opcode="6"+first_argument+second_argument;
             string_too_opcode(opcode);
         }
+    }else if(first_argument=="DT"){
+        opcode="F"+second_argument+"15";
+        string_too_opcode(opcode);
+    }else if(first_argument=="ST"){
+        opcode="F"+second_argument+"18";
+        string_too_opcode(opcode);
+    }else if(first_argument=="F"){
+        opcode="F"+second_argument+"29";
+        string_too_opcode(opcode);
+    }else if(first_argument=="B"){
+        opcode="F"+second_argument+"33";
+        string_too_opcode(opcode);
+    }else if(first_argument=="[I]"){
+        opcode="F"+second_argument+"55";
+        string_too_opcode(opcode);
     }
-
 }
 void compiler::strip_first_ld_arg()
 {

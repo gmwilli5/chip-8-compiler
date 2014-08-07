@@ -312,19 +312,12 @@ void compiler::sknp()
     temp+="A1";
     string_too_opcode(temp);
 }
-///Fx07 - LDdt Vx
-/*void compiler::lddt()
+void compiler::addi()
 {
-    std::string temp="F";
-    for(unsigned int iii=3;iii<line.length();iii++){
-        if(line[iii]==','|line[iii]==' '){
-            9*10;
-        }else{
-            temp+=line[iii];
-        }
+    std::string temp="";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        temp+=line[iii];
     }
-    temp+="07";
-    string_too_opcode(temp);
-}*/
-/// need to change how it does ld so I don't
-/// create new iinstructions for each one
+    std::string opcode="F"+temp+"1E";
+    string_too_opcode(opcode);
+}
