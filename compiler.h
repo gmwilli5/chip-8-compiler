@@ -16,15 +16,16 @@ class compiler{
         void get_next_line();
         void strip_instruction();
         void string_too_opcode(std::string opcode);
+        ///instructions
+        ///instructions without arguments are done
+        ///directly in inteperate_line()
         void sys();
         void jp();
         void call();
         void se();
         void sne();
         void ser();
-        void ld();
         void add();
-        void ldr();
         void Or();
         void And();
         void Xor();
@@ -34,12 +35,16 @@ class compiler{
         void subn();
         void shl();
         void sner();
-        void ldi();
         void jpv();
         void rnd();
         void drw();
         void skp();
         void sknp();
-        void lddt();
+        ///ld instructions and tools
+        void ld();
+        void strip_first_ld_arg();
+        void strip_second_ld_arg();
+        bool argument_register(std::string arg);
+        std::string which_register(std::string arg);
 };
 #endif // COMPILER_H_INCLUDED

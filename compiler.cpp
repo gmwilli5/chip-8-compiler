@@ -27,8 +27,6 @@ void compiler::inteperate_line()
         ld();
     }else if(instruction=="add"){
         add();
-    }else if(instruction=="ldr"){
-        ldr();
     }else if(instruction=="or"){
         Or();
     }else if(instruction=="and"){
@@ -47,8 +45,6 @@ void compiler::inteperate_line()
         shl();
     }else if(instruction=="sner"){
         sner();
-    }else if(instruction=="ldi"){
-        ldi();
     }else if(instruction=="jpv"){
         jpv();
     }else if(instruction=="rnd"){
@@ -59,8 +55,6 @@ void compiler::inteperate_line()
         skp();
     }else if(instruction=="sknp"){
         sknp();
-    }else if(instruction=="lddt"){
-        lddt();
     }
 }
 void compiler::get_next_line()

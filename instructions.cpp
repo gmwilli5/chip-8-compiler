@@ -73,7 +73,7 @@ void compiler::ser()
     string_too_opcode(temp);
 }
 ///6xkk - LD Vx, byte
-void compiler::ld()
+/*void compiler::ld()
 {
     std::string temp="6";
     for(unsigned int iii=3;iii<line.length();iii++){
@@ -84,7 +84,7 @@ void compiler::ld()
         }
     }
     string_too_opcode(temp);
-}
+}*/
 ///7xkk - ADD Vx, byte
 void compiler::add()
 {
@@ -99,7 +99,7 @@ void compiler::add()
     string_too_opcode(temp);
 }
 ///8xy0 - LD Vx, Vy
-void compiler::ldr()
+/*void compiler::ldr()
 {
     std::string temp="8";
     for(unsigned int iii=4;iii<line.length();iii++){
@@ -111,7 +111,7 @@ void compiler::ldr()
     }
     temp+='0';
     string_too_opcode(temp);
-}
+}*/
 ///8xy1 - OR Vx, Vy
 void compiler::Or()
 {
@@ -239,7 +239,7 @@ void compiler::sner()
     string_too_opcode(temp);
 }
 ///Annn - LDi addr
-void compiler::ldi()
+/*void compiler::ldi()
 {
     std::string temp="";
     for(unsigned int iii=4;iii<line.length();iii++){
@@ -247,7 +247,7 @@ void compiler::ldi()
     }
     std::string opcode="A"+temp;
     string_too_opcode(opcode);
-}
+}*/
 ///Bnnn - JPV, addr
 void compiler::jpv()
 {
@@ -313,7 +313,7 @@ void compiler::sknp()
     string_too_opcode(temp);
 }
 ///Fx07 - LDdt Vx
-void compiler::lddt()
+/*void compiler::lddt()
 {
     std::string temp="F";
     for(unsigned int iii=3;iii<line.length();iii++){
@@ -325,6 +325,6 @@ void compiler::lddt()
     }
     temp+="07";
     string_too_opcode(temp);
-}
+}*/
 /// need to change how it does ld so I don't
 /// create new iinstructions for each one
