@@ -13,6 +13,22 @@ void compiler::inteperate_line()
         opcodes.push_back(0x00EE);
     }else if(instruction=="sys"){
         sys();
+    }else if(instruction=="jp"){
+        jp();
+    }else if(instruction=="call"){
+        call();
+    }else if(instruction=="se"){
+        se();
+    }else if(instruction=="sne"){
+        sne();
+    }else if(instruction=="ser"){
+        ser();
+    }else if(instruction=="ld"){
+        ld();
+    }else if(instruction=="add"){
+        add();
+    }else if(instruction=="ldr"){
+        ldr();
     }
 }
 void compiler::get_next_line()

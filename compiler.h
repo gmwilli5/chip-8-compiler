@@ -17,5 +17,13 @@ class compiler{
         void strip_instruction();
         void string_too_opcode(std::string opcode);
         void sys();
+        void jp();
+        void call();
+        void se();
+        void sne();
+        void ser();
+        void ld();
+        void add();
+        void ldr();
 };
 #endif // COMPILER_H_INCLUDED
