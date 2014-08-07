@@ -25,5 +25,21 @@ class compiler{
         void ld();
         void add();
         void ldr();
+        void Or();
+        void And();
+        void Xor();
+        void addr();
+        void sub();
+        void shr();
+        void subn();
+        void shl();
+        void sner();
+        void ldi();
+        void jpv();
+        void rnd();
+        void drw();
+        void skp();
+        void sknp();
+        void lddt();
 };
 #endif // COMPILER_H_INCLUDED

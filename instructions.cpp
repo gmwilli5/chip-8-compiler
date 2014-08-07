@@ -98,6 +98,7 @@ void compiler::add()
     }
     string_too_opcode(temp);
 }
+///8xy0 - LD Vx, Vy
 void compiler::ldr()
 {
     std::string temp="8";
@@ -111,3 +112,219 @@ void compiler::ldr()
     temp+='0';
     string_too_opcode(temp);
 }
+///8xy1 - OR Vx, Vy
+void compiler::Or()
+{
+    std::string temp="8";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='1';
+    string_too_opcode(temp);
+}
+///8xy2 - AND Vx, Vy
+void compiler::And()
+{
+    std::string temp="8";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='2';
+    string_too_opcode(temp);
+}
+///8xy3 - XOR Vx, Vy
+void compiler::Xor()
+{
+    std::string temp="8";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='3';
+    string_too_opcode(temp);
+}
+///8xy4 - ADD Vx, Vy
+void compiler::addr()
+{
+    std::string temp="8";
+    for(unsigned int iii=5;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='4';
+    string_too_opcode(temp);
+}
+///8xy5 - SUB Vx, Vy
+void compiler::sub()
+{
+    std::string temp="8";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='5';
+    string_too_opcode(temp);
+}
+///8xy6 - SHR Vx {, Vy}
+void compiler::shr()
+{
+    std::string temp="8";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='6';
+    string_too_opcode(temp);
+}
+///8xy7 - SUBN Vx, Vy
+void compiler::subn()
+{
+    std::string temp="8";
+    for(unsigned int iii=5;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='7';
+    string_too_opcode(temp);
+}
+///8xyE - SHL Vx {, Vy}
+void compiler::shl()
+{
+    std::string temp="8";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='E';
+    string_too_opcode(temp);
+}
+///9xy0 - SNEr Vx, Vy
+void compiler::sner()
+{
+    std::string temp="9";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='0';
+    string_too_opcode(temp);
+}
+///Annn - LDi addr
+void compiler::ldi()
+{
+    std::string temp="";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        temp+=line[iii];
+    }
+    std::string opcode="A"+temp;
+    string_too_opcode(opcode);
+}
+///Bnnn - JPV, addr
+void compiler::jpv()
+{
+    std::string temp="";
+    for(unsigned int iii=4;iii<line.length();iii++){
+        temp+=line[iii];
+    }
+    std::string opcode="B"+temp;
+    string_too_opcode(opcode);
+}
+///Cxkk - RND Vx, byte
+void compiler::rnd()
+{
+    std::string temp="C";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    string_too_opcode(temp);
+}
+///Dxyn - DRW Vx, Vy, nibble
+void compiler::drw()
+{
+    std::string temp="D";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    string_too_opcode(temp);
+}
+///Ex9E - SKP Vx
+void compiler::skp()
+{
+    std::string temp="E";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+="9E";
+    string_too_opcode(temp);
+}
+///ExA1 - SKNP Vx
+void compiler::sknp()
+{
+    std::string temp="E";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+="A1";
+    string_too_opcode(temp);
+}
+///Fx07 - LDdt Vx
+void compiler::lddt()
+{
+    std::string temp="F";
+    for(unsigned int iii=3;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+="07";
+    string_too_opcode(temp);
+}
+/// need to change how it does ld so I don't
+/// create new iinstructions for each one

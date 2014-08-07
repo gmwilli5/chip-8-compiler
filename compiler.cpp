@@ -29,6 +29,38 @@ void compiler::inteperate_line()
         add();
     }else if(instruction=="ldr"){
         ldr();
+    }else if(instruction=="or"){
+        Or();
+    }else if(instruction=="and"){
+        And();
+    }else if(instruction=="xor"){
+        Xor();
+    }else if(instruction=="addr"){
+        addr();
+    }else if(instruction=="sub"){
+        sub();
+    }else if(instruction=="shr"){
+        shr();
+    }else if(instruction=="subn"){
+        subn();
+    }else if(instruction=="shl"){
+        shl();
+    }else if(instruction=="sner"){
+        sner();
+    }else if(instruction=="ldi"){
+        ldi();
+    }else if(instruction=="jpv"){
+        jpv();
+    }else if(instruction=="rnd"){
+        rnd();
+    }else if(instruction=="drw"){
+        drw();
+    }else if(instruction=="skp"){
+        skp();
+    }else if(instruction=="sknp"){
+        sknp();
+    }else if(instruction=="lddt"){
+        lddt();
     }
 }
 void compiler::get_next_line()
