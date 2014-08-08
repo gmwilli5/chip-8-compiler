@@ -2,6 +2,7 @@
 #include <sstream>
 void compiler::run()
 {
+    line_number=1;
 
 }
 void compiler::inteperate_line()
@@ -57,7 +58,22 @@ void compiler::inteperate_line()
         sknp();
     }else if(instruction=="addi"){
         addi();
+    }else if(instruction=="scr"){
+        scr();
+    }else if(instruction=="scl"){
+        scl();
+    }else if(instruction=="exit"){
+        exit();
+    }else if(instruction=="low"){
+        low();
+    }else if(instruction=="high"){
+        high();
+    }else if(instruction=="drw0"){
+        drw0();
+    }else if(instruction=="scd"){
+        scd();
     }
+    line_number+=1;
 }
 void compiler::get_next_line()
 {
@@ -79,4 +95,8 @@ void compiler::string_too_opcode(std::string opcode)
     unsigned short temp_opcode;
     buffer >> std::hex >> temp_opcode;
     opcodes.push_back(temp_opcode);
+}
+void compiler::handle_error(std::string message)
+{
+
 }

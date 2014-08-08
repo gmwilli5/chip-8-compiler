@@ -7,6 +7,7 @@ class compiler{
     public:
         File input_file;
         File output_file;
+        unsigned int line_number;
         std::vector<unsigned short> opcodes;
         std::string line;
         std::string instruction;
@@ -16,6 +17,7 @@ class compiler{
         void get_next_line();
         void strip_instruction();
         void string_too_opcode(std::string opcode);
+        void handle_error(std::string message);
         ///instructions
         ///instructions without arguments are done
         ///directly in inteperate_line()
@@ -47,5 +49,13 @@ class compiler{
         void strip_second_ld_arg();
         bool argument_register(std::string arg);
         std::string which_register(std::string arg);
+        ///super chip instructions
+        void scr();
+        void scl();
+        void exit();
+        void low();
+        void high();
+        void drw0();
+        void scd();
 };
 #endif // COMPILER_H_INCLUDED

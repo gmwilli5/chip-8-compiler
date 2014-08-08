@@ -38,6 +38,15 @@ void compiler::ld()
     }else if(first_argument=="[I]"){
         opcode="F"+second_argument+"55";
         string_too_opcode(opcode);
+    }else if(first_argument=="HF"){
+        opcode="F"+second_argument+"30";
+        string_too_opcode(opcode);
+    }else if(first_argument=="R"){
+        opcode="F"+second_argument+"75";
+        string_too_opcode(opcode);
+    }else if(second_argument=="R"){
+        opcode="F"+second_argument+"85";
+        string_too_opcode(opcode);
     }
 }
 void compiler::strip_first_ld_arg()

@@ -312,6 +312,7 @@ void compiler::sknp()
     temp+="A1";
     string_too_opcode(temp);
 }
+///00FB - SCR
 void compiler::addi()
 {
     std::string temp="";
@@ -320,4 +321,49 @@ void compiler::addi()
     }
     std::string opcode="F"+temp+"1E";
     string_too_opcode(opcode);
+}
+///00FC - SCL
+void compiler::scr()
+{
+    string_too_opcode("00FB");
+}
+///00FC - SCL
+void compiler::scl()
+{
+    string_too_opcode("00FC");
+}
+///00FD - EXIT
+void compiler::exit()
+{
+    string_too_opcode("00FD");
+}
+///00FE - LOW
+void compiler::low()
+{
+    string_too_opcode("00FE");
+}
+///00FF - HIGH
+void compiler::high()
+{
+    string_too_opcode("00FF");
+}
+///Dxy0 - DRW0 Vx, Vy
+void compiler::drw0()
+{
+    std::string temp="D";
+    for(unsigned int iii=5;iii<line.length();iii++){
+        if(line[iii]==','|line[iii]==' '){
+            9*10;
+        }else{
+            temp+=line[iii];
+        }
+    }
+    temp+='0';
+    string_too_opcode(temp);
+}
+///00Cn - SCD nibble
+void compiler::scd()
+{
+    std::string temp="00C"+line[4];
+    string_too_opcode(temp);
 }
