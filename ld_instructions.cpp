@@ -47,6 +47,8 @@ void compiler::ld()
     }else if(second_argument=="R"){
         opcode="F"+second_argument+"85";
         string_too_opcode(opcode);
+    }else{
+        handle_error("unknown ld instruction");
     }
 }
 void compiler::strip_first_ld_arg()

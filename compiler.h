@@ -1,23 +1,26 @@
 #ifndef COMPILER_H_INCLUDED
 #define COMPILER_H_INCLUDED
 #include "file.h"
+#include "compiler_error.h"
 #include <vector>
 #include <string>
 class compiler{
     public:
         File input_file;
         File output_file;
+        bool error;
         unsigned int line_number;
         std::vector<unsigned short> opcodes;
+        std::vector<compiler_error> errors;
         std::string line;
         std::string instruction;
     public:
+        compiler();
         void run();
         void inteperate_line();
         void get_next_line();
         void strip_instruction();
         void string_too_opcode(std::string opcode);
-        void handle_error(std::string message);
         ///instructions
         ///instructions without arguments are done
         ///directly in inteperate_line()
@@ -57,5 +60,8 @@ class compiler{
         void high();
         void drw0();
         void scd();
+        ///error handling
+        void handle_error(std::string message);
+        void print_errors();
 };
 #endif // COMPILER_H_INCLUDED

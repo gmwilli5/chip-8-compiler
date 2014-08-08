@@ -1,5 +1,9 @@
 #include "compiler.h"
 #include <sstream>
+compiler::compiler()
+{
+    error=false;
+}
 void compiler::run()
 {
     line_number=1;
@@ -72,6 +76,8 @@ void compiler::inteperate_line()
         drw0();
     }else if(instruction=="scd"){
         scd();
+    }else{
+        handle_error("unknown instruction");
     }
     line_number+=1;
 }
@@ -98,5 +104,13 @@ void compiler::string_too_opcode(std::string opcode)
 }
 void compiler::handle_error(std::string message)
 {
-
+    error=true;
+    compiler_error temp(message,line_number,line);
+    errors.push_back(temp);
+}
+void compiler::print_errors()
+{
+    for(unsigned int iii=0;iii<errors.size();iii++){
+        errors[iii].print_error();
+    }
 }
