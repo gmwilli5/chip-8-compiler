@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1407365952 source:c:\users\george williams\desktop\opengl\chip-8-compiler\main.cpp
+	<iostream>
+
+1407374964 source:c:\users\george williams\desktop\opengl\chip-8-compiler\file.cpp
+	"file.h"
+
+1407374908 c:\users\george williams\desktop\opengl\chip-8-compiler\file.h
+	<fstream>
+	<string>
+
+1407463112 source:c:\users\george williams\desktop\opengl\chip-8-compiler\compiler.cpp
+	"compiler.h"
+	<sstream>
+
+1407466186 c:\users\george williams\desktop\opengl\chip-8-compiler\compiler.h
+	"file.h"
+	"compiler_error.h"
+	<vector>
+	<string>
+
+1407440725 source:c:\users\george williams\desktop\opengl\chip-8-compiler\instructions.cpp
+	"compiler.h"
+	<string>
+	<sstream>
+
+1407463984 source:c:\users\george williams\desktop\opengl\chip-8-compiler\ld_instructions.cpp
+	"compiler.h"
+	<string>
+
+1407463975 source:c:\users\george williams\desktop\opengl\chip-8-compiler\compiler_error.cpp
+	<iostream>
+	"compiler_error.h"
+
+1407463808 c:\users\george williams\desktop\opengl\chip-8-compiler\compiler_error.h
+	<string>
+
